@@ -1,13 +1,13 @@
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react'
-import { injected } from './utils/injected.js'
+import { injected } from '../utils/injected.js'
 import { useWeb3React } from '@web3-react/core';
 
 export const MetaMaskContext = React.createContext(null)
 
 export const MetaMaskProvider = ({ children }) => {
 
-    const { activate, account, library, connector, chainId, active, deactivate } = useWeb3React()
+    const { activate, account, library, chainId, active } = useWeb3React()
 
     const [isActive, setIsActive] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
@@ -38,27 +38,27 @@ export const MetaMaskProvider = ({ children }) => {
     }
 
     // Disconnect from Metamask wallet
-    const disconnect = async () => {
-        console.log('Deactivating...')
-        try {
-            await deactivate()
-        } catch(error) {
-            console.log('Error on disconnecting: ', error)
-        }
-    }
+    // const disconnect = async () => {
+    //     console.log('Deactivating...')
+    //     try {
+    //         await deactivate()
+    //     } catch(error) {
+    //         console.log('Error on disconnecting: ', error)
+    //     }
+    // }
 
-    const values = useMemo( // 자주 사용하는 값을 caching 한다. 
-        () => ({
-            isActive,
-            account,
-            isLoading,
-            connect,
-            disconnect
-        }),
-        //[isActive, isLoading]
-    )
+    // const values = useMemo( // 자주 사용하는 값을 caching 한다. 
+    //     () => ({
+    //         isActive,
+    //         account,
+    //         isLoading,
+    //         connect,
+    //         disconnect
+    //     }),
+    //     //[isActive, isLoading]
+    // )
 
-    return <MetaMaskContext.Provider value={values}>{children}</MetaMaskContext.Provider>
+    return <MetaMaskContext.Provider value={{isActive, account, isLoading, connect}}>{children}</MetaMaskContext.Provider>
 }
 
 export default function useMetaMask() {

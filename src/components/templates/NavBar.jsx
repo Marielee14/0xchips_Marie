@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 // import  useMetaMask from "../../useMetamask.js";
 // import { useWeb3React } from "@web3-react/core";
 //import { ethers } from "ethers";
@@ -6,11 +7,17 @@ import { Box, Flex, Text, Stack, Link } from "@chakra-ui/react";
 import { ethers } from "ethers";
 import { HamburgerIcon } from "@chakra-ui/icons";
 // import { injected } from "../../utils/injected";
-// import Web3 from "web3";
+import Web3 from "web3";
+
 export default function NavBar() {
+  const web3 = new Web3(window.ethereum);
+  // const contractAddress = "0xabc"
+  // const contract = new web3.eth.Contract(contractAddress)
   const [errorMessage, setErrorMessage] = useState(null);
   const [account, setAccount] = useState(null);
   const [balance, setBalance] = useState(null);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (window.ethereum) {
@@ -152,18 +159,26 @@ export default function NavBar() {
           justify={"flex-start"}
           direction={"row"}
           spacing={3}>
-          <Link href="/about">
-            <Box
-              as={"button"}
-              position={"relative"}
-              justify={"center"}
-              align={"start"}>
-              <HamburgerIcon w={16} h={10} />
-            </Box>
-          </Link>
+          <Box
+            as={"button"}
+            onClick={() => navigate("/about")}
+            _hover={{ bg: "black" }}
+            _active={{
+              bg: "black",
+              transform: "scale(0.98)",
+            }}
+            position={"relative"}
+            justify={"center"}
+            align={"start"}>
+            <HamburgerIcon w={16} h={10} />
+          </Box>
 
-          <Box as={"button"} justify={"center"} align={"center"}>
-            <Link href="/">
+          <Box
+            as={"button"}
+            justify={"center"}
+            align={"center"}
+            onClick={() => navigate("/")}>
+         
               <Text
                 mt={-2}
                 fontWeight={600}
@@ -172,7 +187,7 @@ export default function NavBar() {
                 color={"#F7FF58"}>
                 0xchips
               </Text>
-            </Link>
+      
           </Box>
         </Stack>
 
@@ -182,21 +197,25 @@ export default function NavBar() {
           direction={"row"}
           spacing={3}>
           <Box
+            display={account ? "on" : "none"}
             as="button"
             height="44px"
-            width="200px"
+            width="150px"
             transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
+            borderColor={"#Be2525"}
+            borderWidth={3}
             borderRadius="20px"
             fontSize="20px"
             fontWeight="semibold"
             bg="gray.700"
             // color="black"
+            onClick={() => navigate("/mypage")}
             _hover={{ bg: "black" }}
             _active={{
-              bg: "#0A090C",
+              bg: "black",
               transform: "scale(0.98)",
             }}>
-            List Your Game
+            My NFT
           </Box>
           <Box
             as="button"

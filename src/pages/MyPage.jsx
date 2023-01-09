@@ -9,6 +9,7 @@ const MyPage = () => {
   const [balance, setBalance] = useState()
 
   const connect = async () => {
+  
     if (window.ethereum) {
       try {
         const res = await window.ethereum.request({

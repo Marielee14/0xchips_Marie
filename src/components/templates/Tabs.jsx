@@ -1,60 +1,40 @@
-import { Text, Flex, Box, VStack, Tabs, TabList, Tab, Image, Icon } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import { StarIcon } from "@chakra-ui/icons";
-import { HiOutlineStar } from "react-icons/hi";
+import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@chakra-ui/react";
 
+import Introduction from "../organisms/Introduction";
+import gameDetails from "../../mock/gamedata";
+import { useNavigate } from "react-router-dom";
 
-
-export default function GameTabs({imgsrc, name}) {
+export default function GameTabs({game}) {
   return (
-    <>
-      <Flex mx={300}>
-        <Box border="4px" borderColor="white" w="180px" h="180px" mr={20}>
-          <Image src={imgsrc} w="100%" h="100%"></Image>
-        </Box>
-        <Text as="b" fontSize="5xl">
-          {name}
-        </Text>
-        <Icon
-          as={HiOutlineStar}
-          boxSize="45px"
-          justifyContent="center"
-          alignItems="center"
-          ml="20px"
-          mt="17px"
-        />
-      </Flex>
-      <Flex mx={300} mt={40}>
-        <Tabs h={100} variant="soft-rounded" colorScheme="green">
-          <TabList mb="3em">
-            <Link to-="/">
-              <Tab
-                h="60px"
-                fontSize="30px"
-                _selected={{ color: "black", bg: "#F7FF58" }}
-              >
-                ABOUT THIS GAME
-              </Tab>
-            </Link>
-            <Tab
-              h="60px"
-              fontSize="30px"
-              _selected={{ color: "black", bg: "#F7FF58" }}
-            >
-              NFT
-            </Tab>
-            <Link to-="/forum">
-              <Tab
-                h="60px"
-                fontSize="30px"
-                _selected={{ color: "black", bg: "#F7FF58" }}
-              >
-                FORUM
-              </Tab>
-            </Link>
-          </TabList>
-        </Tabs>
-      </Flex>
-    </>
+    <Tabs isFitted variant="enclosed" size="lg" my={400} mx={100} fontSize={20}>
+      <TabList mb={10}>
+        <Tab fontSize={22} _selected={{ color: "white", bg: "gray.600" }}>
+          About the game
+        </Tab>
+        <Tab fontSize={22} _selected={{ color: "white", bg: "gray.600" }}>
+          Listed NFTs
+        </Tab>
+        <Tab fontSize={22} _selected={{ color: "white", bg: "gray.600" }}>
+          Community
+        </Tab>
+      </TabList>
+      <TabPanels>
+        <TabPanel>
+          {gameDetails
+            .filter((game) => {
+                return game;
+            })
+            .map((game) => (
+              <Introduction game={game} />
+            ))}
+        </TabPanel>
+        <TabPanel>
+          <p>two!</p>
+        </TabPanel>
+        <TabPanel>
+          <p>Three!</p>
+        </TabPanel>
+      </TabPanels>
+    </Tabs>
   );
 }
