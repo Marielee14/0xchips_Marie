@@ -3,11 +3,11 @@ import NavBar from "./components/templates/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import NFTs from "./pages/NFTs";
+
 import MyPage from "./pages/MyPage"
 import Footer from "./components/templates/Footer";
 import GameTabs from "./components/templates/Tabs";
-
+import NftCollection from "./components/organisms/NftCollection";
 import theme from "./theme";
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/nfts" element={<NFTs />} />
+          <Route path="/nfts" element={<NftCollection/>} />
           <Route path="/myPage" element={<MyPage />} />
           <Route path="/games/:gameTitle" element={<GameTabs />} />
         </Routes>

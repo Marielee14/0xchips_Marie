@@ -1,6 +1,7 @@
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import Introduction from "../organisms/Introduction";
+import NftCollection from "../../pages/NftCollection";
 import gameDetails from "../../mock/gamedata";
 
 
@@ -28,16 +29,10 @@ export default function GameTabs() {
       <TabPanels>
         <TabPanel>
           <Introduction />
-          {/* {gameDetails
-            .filter((game) => {
-                return game;
-            })
-            .map((game) => (
-              <Introduction game={game} />
-            ))} */}
+ 
         </TabPanel>
         <TabPanel>
-          <p>two!</p>
+         <NftCollection/>
         </TabPanel>
         <TabPanel>
           <p>Three!</p>
