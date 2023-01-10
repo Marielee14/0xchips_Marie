@@ -26,7 +26,7 @@ const displayItems = [
     tagline: "#the largest game in the world",
     title: "Otherdeed for Otherside",
     contents:
-      "We set out to build the Otherside with one thing in mind: the metaverse should be anything but boring. The world should be dynamic, steeped in narrative, and your actions should hold consequence.", 
+      "We set out to build the Otherside with one thing in mind: the metaverse should be anything but boring. The world should be dynamic, steeped in narrative, and your actions should hold consequence.",
     image: Otherdeed,
   },
 

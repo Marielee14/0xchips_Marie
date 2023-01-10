@@ -4,15 +4,8 @@ import Introduction from "../organisms/Introduction";
 import NftCollection from "../../pages/NftCollection";
 import gameDetails from "../../mock/gamedata";
 
-
 export default function GameTabs() {
-//  let gameList = [];
-const { gameTitle } = useParams();
-
-for (let i = 0; i<gameDetails.length; i++) {
-if (gameTitle === gameDetails.title) {
-
-
+  //  let gameList = [];
 
   return (
     <Tabs isFitted variant="enclosed" size="lg" my={400} mx={100} fontSize={20}>
@@ -29,12 +22,10 @@ if (gameTitle === gameDetails.title) {
       </TabList>
       <TabPanels>
         <TabPanel>
-          
           <Introduction />
- 
         </TabPanel>
         <TabPanel>
-         <NftCollection/>
+          <NftCollection />
         </TabPanel>
         <TabPanel>
           <p>Three!</p>
@@ -42,4 +33,4 @@ if (gameTitle === gameDetails.title) {
       </TabPanels>
     </Tabs>
   );
-}}}
+}
