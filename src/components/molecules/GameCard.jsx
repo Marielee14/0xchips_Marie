@@ -25,7 +25,7 @@ const GameCard = ({ games }) => {
       >
         <Box
           as={"button"}
-          onClick={() => navigate(`/games/${games.title}`)}
+          // onClick={() => navigate(`/games/${games.title}`)}
           w={"450px"}
           h={"600px"}
           bg={"black"}

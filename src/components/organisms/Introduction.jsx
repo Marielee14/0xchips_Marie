@@ -13,7 +13,7 @@ import gameDetails from "../../mock/gamedata";
 function Introduction() {
   const { gameTitle } = useParams();
   const thisGame = gameDetails.find(game=>game.title = gameTitle)
-
+if (thisGame.title === gameTitle) {
     return (
       <Flex h={"100vh"} mx={300} mt={30} justify={"center"}>
         <SimpleGrid columns={2} spacing={10} key={thisGame.id}>
@@ -52,5 +52,5 @@ function Introduction() {
       </Flex>
     );
   }
-
+}
 export default Introduction;

@@ -7,12 +7,13 @@ import gameDetails from "../../mock/gamedata";
 
 export default function GameTabs() {
 //  let gameList = [];
-//   const { gameTitle } = useParams();
+const { gameTitle } = useParams();
 
-// for (let i = 0; i<gameDetails.length; i++) {
-// if (gameTitle === gameDetails.title) {
+for (let i = 0; i<gameDetails.length; i++) {
+if (gameTitle === gameDetails.title) {
 
- 
+
+
   return (
     <Tabs isFitted variant="enclosed" size="lg" my={400} mx={100} fontSize={20}>
       <TabList mb={10}>
@@ -28,6 +29,7 @@ export default function GameTabs() {
       </TabList>
       <TabPanels>
         <TabPanel>
+          
           <Introduction />
  
         </TabPanel>
@@ -40,4 +42,4 @@ export default function GameTabs() {
       </TabPanels>
     </Tabs>
   );
-}
+}}}
