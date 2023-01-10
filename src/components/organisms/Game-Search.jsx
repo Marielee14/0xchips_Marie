@@ -1,10 +1,11 @@
 //import Image from 'next/image';
 import { SimpleGrid } from "@chakra-ui/react";
 import GameCard from "../molecules/GameCard";
-import displayItems from "../../mock/data";
+import gameDetails from "../../mock/gamedata";
 import React, { useState, useEffect } from "react";
 import { Heading, Stack, Input, IconButton, Flex } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
+import {useParams} from "react-router-dom"
 
 import "@fontsource/iceberg";
 
@@ -16,6 +17,8 @@ const SearchResult = () => {
   // useEffect(() => {
   //   setSearchTerm()
   // })
+const {gameId}= useParams()
+
   return (
     <>
       <Stack h={"300px"} justify={"center"} align={"center"} my={10} pt={10}>
@@ -60,7 +63,7 @@ const SearchResult = () => {
         align={"center"}
         my={"60px"}
       >
-        {displayItems
+        {gameDetails
           .filter((games) => {
             if (searchTerm == "") {
               return games;

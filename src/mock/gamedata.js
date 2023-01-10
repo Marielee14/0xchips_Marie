@@ -16,7 +16,9 @@ import BYOLandAbout3 from "../asset/BYOLand/BYOLand_about_3.png";
 
 const gameDetails = [
   {
-    id:" 1",
+    id: " 1",
+    title: "OtherdeedForOtherside",
+    tagline: "#the largest game in the world",
     head1: "A_STRANGE_NEW_WORLD",
     head2: "VISITORS FROM AFAR",
     head3: "TREASURES AND TOOLS",
@@ -53,6 +55,8 @@ const gameDetails = [
   },
   {
     id: "2",
+    title: "The Sandbox",
+    tagline: "#the largest game in the world",
     head1: "Play. Create. Own. Govern. Earn. Welcome to the Metaverse",
     head2: "A User-Generated Content Ecosystem",
     head3: "Blockchain Gaming with NFTs",
@@ -90,6 +94,8 @@ const gameDetails = [
   },
   {
     id: "3",
+    title: "WarRiders",
+    tagline: "#the largest game in the world",
     head1: "A Blockchain Game of Blowing Up Cars and Collecting Crypto",
     head2: "War Riders is reimagining the nature of MMO gaming",
     head3: "The purpose of the game is to become the most powerful army",
@@ -114,7 +120,9 @@ const gameDetails = [
     img3: WarRidersAbout3,
   },
   {
-    id:" 4",
+    id: " 4",
+    title: "Apostles Genesis",
+    tagline: "#the largest game in the world",
     head1: "THE NEXT EVOLUTION OF AVATARS",
     head2: "THE APOSTLES ARE DIVERSE",
     head3: "3D GAME READY AVATARS",
@@ -133,6 +141,8 @@ const gameDetails = [
   },
   {
     id: "5",
+    title: "BYOLand",
+    tagline: "#the largest game in the world",
     head1: "A_STRANGE_NEW_WORLD",
     head2: "VISITORS FROM AFAR",
     head3: "TREASURES AND TOOLS",

@@ -1,10 +1,17 @@
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@chakra-ui/react";
-
+import { useParams } from "react-router-dom";
 import Introduction from "../organisms/Introduction";
 import gameDetails from "../../mock/gamedata";
-import { useNavigate } from "react-router-dom";
 
-export default function GameTabs({game}) {
+
+export default function GameTabs() {
+//  let gameList = [];
+//   const { gameTitle } = useParams();
+
+// for (let i = 0; i<gameDetails.length; i++) {
+// if (gameTitle === gameDetails.title) {
+
+ 
   return (
     <Tabs isFitted variant="enclosed" size="lg" my={400} mx={100} fontSize={20}>
       <TabList mb={10}>
@@ -20,13 +27,14 @@ export default function GameTabs({game}) {
       </TabList>
       <TabPanels>
         <TabPanel>
-          {gameDetails
+          <Introduction />
+          {/* {gameDetails
             .filter((game) => {
                 return game;
             })
             .map((game) => (
               <Introduction game={game} />
-            ))}
+            ))} */}
         </TabPanel>
         <TabPanel>
           <p>two!</p>
