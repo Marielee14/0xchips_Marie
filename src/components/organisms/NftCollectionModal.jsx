@@ -1,5 +1,6 @@
 import React from "react";
-import MarketplaceJSON from "../Marketplace.json";
+import MarketplaceJSON from "../../Marketplace.json";
+import myNFTs from "../../mock/nftData.js";
 
 import {  Image, Button,Modal,
     ModalOverlay,
@@ -25,7 +26,7 @@ async function buyNFT(tokenId) {
       MarketplaceJSON.abi,
       signer
     );
-    const salePrice = ethers.utils.parseUnits(data.price, "ether");
+    const salePrice = ethers.utils.parseUnits(myNFTs.price, "ether");
     //run the executeSale function
     let transaction = await contract.executeSale(tokenId, {
       value: salePrice,

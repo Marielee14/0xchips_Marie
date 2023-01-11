@@ -8,67 +8,79 @@ const myNFTs = [
     label: "1",
     tagline: "The Dori Samurai #19",
     image: nft1,
+    price: 0.1,
   },
 
   {
     label: "2",
     tagline: "The Dori Samurai #153",
     image: nft2,
+    price: 0.1,
   },
   {
     label: "3",
     tagline: "Otherdeed for Otherside #50116",
     image: nft3,
+    price: 0.1,
   },
 
   {
     label: "4",
     tagline: "GENUIE UNDEAD #3550",
     image: nft4,
+    price: 0.1,
   },
   {
     label: "1",
     tagline: "The Dori Samurai #19",
     image: nft1,
+    price: 0.1,
   },
 
   {
     label: "2",
     tagline: "The Dori Samurai #153",
     image: nft2,
+    price: 0.1,
   },
   {
     label: "3",
     tagline: "Otherdeed for Otherside #50116",
     image: nft3,
+    price: 0.1,
   },
 
   {
     label: "4",
     tagline: "GENUIE UNDEAD #3550",
     image: nft4,
+    price: 0.1,
   },
   {
     label: "1",
     tagline: "The Dori Samurai #19",
     image: nft1,
+    price: 0.1,
   },
 
   {
     label: "2",
     tagline: "The Dori Samurai #153",
     image: nft2,
+    price: 0.1,
   },
   {
     label: "1",
     tagline: "The Dori Samurai #19",
     image: nft1,
+    price: 0.1,
   },
 
   {
     label: "2",
     tagline: "The Dori Samurai #153",
     image: nft2,
+    price: 0.1,
   },
 ];
 
