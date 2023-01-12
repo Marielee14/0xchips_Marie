@@ -1,7 +1,16 @@
 import React from "react";
-import { Box, Heading, Text, Stack, Image, Button } from "@chakra-ui/react";
+import { Box, Heading, Text, Stack, Image, Button,Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,useDisclosure,Input } from "@chakra-ui/react";
+
+import Modals from "./MyCollectionModal";
 
 const MyNFT = ({ games }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Stack key={games.label} mt={"40px"} direction={"row"} px={"40px"}>
       <Box
@@ -28,7 +37,7 @@ const MyNFT = ({ games }) => {
             {games.tagline}
           </Text>
           <Heading color={"rgba(234, 234, 234, 0.5)"} fontSize={"20"}>
-            판매가 없음
+            price
           </Heading>
           {/* <Box bg={"rgba(227, 221, 221, 0.5)"} rounded={"xl"}>
                 <Image src={eth} h={"30px"} w={"20px"} />
@@ -44,10 +53,12 @@ const MyNFT = ({ games }) => {
           display={"flex"}
           textAlign={"center"}
           mb={5}
+          onClick={onOpen}
         >
-          판매하기
+          SELL
         </Button>
       </Box>
+      <Modals games={games} isOpen={isOpen} onClose={onClose} onOpen={onOpen}/>
     </Stack>
   );
 };

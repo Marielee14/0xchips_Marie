@@ -1,18 +1,27 @@
 import OtherdeedForOthersideAbout1 from "../asset/OtherdeedForOtherside/Otherdeed_for_Otherside_about_1.png";
 import OtherdeedForOthersideAbout2 from "../asset/OtherdeedForOtherside/Otherdeed_for_Otherside_about_2.png";
 import OtherdeedForOthersideAbout3 from "../asset/OtherdeedForOtherside/Otherdeed_for_Otherside_about_3.png";
+import OtherdeedForOthersideIcon from "../asset/OtherdeedForOtherside/Otherdeed_for_Otherside_Icon.png";
+
 import TheSandboxAbout1 from "../asset/TheSandbox/TheSandbox_about_1.png";
 import TheSandboxAbout2 from "../asset/TheSandbox/TheSandbox_about_2.png";
 import TheSandboxAbout3 from "../asset/TheSandbox/TheSandbox_about_3.png";
+import TheSandboxIcon from "../asset/TheSandbox/TheSandbox_Icon.png";
+
 import WarRidersAbout1 from "../asset/WarRiders/WarRiders_about_1.png";
 import WarRidersAbout2 from "../asset/WarRiders/WarRiders_about_2.jpg";
 import WarRidersAbout3 from "../asset/WarRiders/WarRiders_about_3.png";
+import WarRidersIcon from "../asset/WarRiders/WarRiders_Icon.png";
+
 import ApostlesGenesisAbout1 from "../asset/ApostlesGenesis/ApostlesGenesis_about_1.png";
 import ApostlesGenesisAbout2 from "../asset/ApostlesGenesis/ApostlesGenesis_about_2.png";
 import ApostlesGenesisAbout3 from "../asset/ApostlesGenesis/ApostlesGenesis_about_3.png";
+import ApostlesGenesisIcon from "../asset/ApostlesGenesis/ApostlesGenesis_Icon.png";
+
 import BYOLandAbout1 from "../asset/BYOLand/BYOLand_about_1.png";
 import BYOLandAbout2 from "../asset/BYOLand/BYOLand_about_2.png";
 import BYOLandAbout3 from "../asset/BYOLand/BYOLand_about_3.png";
+import BYOLandIcon from "../asset/BYOLand/BYOLand_Icon.png";
 
 const gameDetails = [
   {
@@ -52,10 +61,11 @@ const gameDetails = [
     img1: OtherdeedForOthersideAbout1,
     img2: OtherdeedForOthersideAbout2,
     img3: OtherdeedForOthersideAbout3,
+    icon: OtherdeedForOthersideIcon,
   },
   {
     id: "2",
-    title: "The Sandbox",
+    title: `The Sandbox`,
     tagline: "#the largest game in the world",
     head1: "Play. Create. Own. Govern. Earn. Welcome to the Metaverse",
     head2: "A User-Generated Content Ecosystem",
@@ -91,6 +101,7 @@ const gameDetails = [
     img1: TheSandboxAbout1,
     img2: TheSandboxAbout2,
     img3: TheSandboxAbout3,
+    icon: TheSandboxIcon,
   },
   {
     id: "3",
@@ -118,6 +129,7 @@ const gameDetails = [
     img1: WarRidersAbout1,
     img2: WarRidersAbout2,
     img3: WarRidersAbout3,
+    icon: WarRidersIcon,
   },
   {
     id: " 4",
@@ -138,6 +150,7 @@ const gameDetails = [
     img1: ApostlesGenesisAbout1,
     img2: ApostlesGenesisAbout2,
     img3: ApostlesGenesisAbout3,
+    icon: ApostlesGenesisIcon,
   },
   {
     id: "5",
@@ -176,6 +189,7 @@ const gameDetails = [
     img1: BYOLandAbout1,
     img2: BYOLandAbout2,
     img3: BYOLandAbout3,
+    icon: BYOLandIcon,
   },
 ];
 

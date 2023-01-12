@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Mark, Box, Heading, useHighlight, Flex } from "@chakra-ui/react";
 import { ethers } from "ethers";
+import MyCollectionList from "../components/organisms/MyCollectionList";
 
 const MyPage = () => {
 
@@ -46,30 +47,31 @@ const MyPage = () => {
   });
 
   return (
-    <Flex   
-      w={650}
-      h={350}
-   
-      display={"raw"}
-      justify={"center"}
-      align={"center"}
-      my={200}
-      mx={300}>
-      <Heading lineHeight="50px" >
-        {chunks.map(({ match, text }) => {
-          if (!match) return text;
-          return (text === "connected wallet address" || text === "the balance") ? (
-            <Box as="u">
-              {text}
-            </Box>
-          ) : (
-            <Mark bg="white" color="black" px="3" py="1">
-              {text}
-            </Mark>
-          );
-        })}
-      </Heading>
-    </Flex>
+    <>
+      <Flex  
+        padding={90}
+        h={200}
+        display={"raw"}
+        justify={"center"}
+        align={"center"}
+        my={200}
+        mx={300}>
+        <Heading lineHeight="50px">
+          {chunks.map(({ match, text }) => {
+            if (!match) return text;
+            return text === "connected wallet address" ||
+              text === "the balance" ? (
+              <Box as="u">{text}</Box>
+            ) : (
+              <Mark bg="white" color="black" px="3" py="1">
+                {text}
+              </Mark>
+            );
+          })}
+        </Heading>
+      </Flex>
+      <MyCollectionList />
+    </>
   );
 };
 

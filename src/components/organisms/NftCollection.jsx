@@ -37,7 +37,7 @@ const NftCollection = ({ games }) => {
             {games.tagline}
           </Text>
           <Heading color={"rgba(234, 234, 234, 0.5)"} fontSize={"20"}>
-            구매가 없음
+           Price
           </Heading>
           {/* <Box bg={"rgba(227, 221, 221, 0.5)"} rounded={"xl"}>
                 <Image src={eth} h={"30px"} w={"20px"} />
@@ -55,7 +55,7 @@ const NftCollection = ({ games }) => {
           mb={5}
           onClick={onOpen}
         >
-          구매하기
+          BUY
         </Button>
       </Box>
       <Modals games={games} isOpen={isOpen} onClose={onClose} onOpen={onOpen}/>

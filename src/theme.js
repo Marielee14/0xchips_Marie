@@ -1,6 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
 // import "@fontsource/aldrich";
 import "@fontsource/barlow";
+import "@fontsource/inter";
 
 
 const theme = extendTheme({
@@ -14,8 +15,8 @@ const theme = extendTheme({
   },
 
   fonts: {
-    heading: ` "Barlow", sans-serif; `,
-    body: ` "Barlow", sans-serif; `,
+    heading: ` "Inter", sans-serif; `,
+    body: ` "Inter", sans-serif; `,
   },
 });
 
